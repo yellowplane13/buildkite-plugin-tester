@@ -5,10 +5,8 @@ steps:
         run: tests
   - wait
   - label: ":docker: :rocket:"
+    command: "echo hello"
     plugins:
       docker-login#v2.0.1:
         username: test
         password-env: test
-      docker-compose#v2.5.1:
-        push: release
-    branches: master
